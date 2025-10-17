@@ -38,7 +38,7 @@ void multiply_sequential() {
 
 // Fonction de multiplication parallèle avec OpenMP
 void multiply_parallel() {
-    // Déclaration des variables au début de la fonction (Correction de la portée)
+    
     int i, j, k; 
     
     // Utiliser la directive pragma pour paralléliser la boucle 'i'
