@@ -16,7 +16,7 @@ threads = np.array([1, 2, 4, 8])
 # Calcul du Speedup (S_P = T1_REF / T_P)
 speedup = T1_REF / temps_mesures
 
-# Calcul de l'Accélération Théorique (Idéale)
+# Calcul de l'Accélération Théorique
 speedup_ideal = threads
 
 # ==============================================================================
@@ -26,10 +26,10 @@ speedup_ideal = threads
 plt.figure(figsize=(10, 6))
 plt.style.use('seaborn-v0_8-darkgrid')
 
-# 1. Courbe d'accélération mesurée (vos résultats)
+# 1. Courbe d'accélération mesurée
 plt.plot(threads, speedup, marker='o', linestyle='-', color='blue', label='Speedup mesuré (OpenMP)')
 
-# 2. Courbe d'accélération théorique (la ligne idéale)
+# 2. Courbe d'accélération théorique
 plt.plot(threads, speedup_ideal, linestyle='--', color='red', label='Speedup théorique (Linéaire)')
 
 # Configuration des axes et du titre
@@ -37,7 +37,7 @@ plt.title(f"Analyse du Speedup pour la Multiplication de Matrices ({N}x{N})", fo
 plt.xlabel("Nombre de Threads (P)", fontsize=12)
 plt.ylabel("Accélération (Speedup $S_P$)", fontsize=12)
 
-# Définition des ticks pour l'axe X (correspond aux threads testés)
+# Définition des ticks pour l'axe X 
 plt.xticks(threads)
 plt.yticks(np.arange(0, 9, 1)) 
 
@@ -45,6 +45,6 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
-# Sauvegarder le graphique dans le dépôt GitHub (au même emplacement que le script)
+# Sauvegarder le graphique dans le dépôt GitHub
 plt.savefig("speedup_graph.png")
-print("Le graphique 'speedup_graph.png' a été généré dans votre dossier actuel.")
+print("Le graphique 'speedup_graph.png' a été généré.")
