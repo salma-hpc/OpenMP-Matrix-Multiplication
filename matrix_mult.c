@@ -23,7 +23,7 @@ void init_matrices() {
 
 // Fonction de multiplication séquentielle
 void multiply_sequential() {
-    // Déclaration des variables au début de la fonction (Correction de la portée)
+    // Déclaration des variables au début de la fonction 
     int i, j, k; 
     
     for (i = 0; i < N; i++) {
@@ -41,7 +41,7 @@ void multiply_parallel() {
     int i, j, k; 
     
     // Utiliser la directive pragma pour paralléliser la boucle 'i'
-    // 'private(j, k)' assure que chaque thread a sa propre copie de ces indices (bonne pratique)
+    // 'private(j, k)' assure que chaque thread a sa propre copie de ces indices
     #pragma omp parallel for private(j, k) shared(A, B, C)
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++) {
