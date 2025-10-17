@@ -1,15 +1,15 @@
-# 🚀 Projet HPC : Optimisation de la Multiplication de Matrices avec OpenMP
+#  Projet HPC : Optimisation de la Multiplication de Matrices avec OpenMP
 
 Ce projet a pour objectif de quantifier les gains de performance (*Speedup*) obtenus en parallélisant l'algorithme classique de multiplication de matrices $C = A \times B$ en utilisant la bibliothèque **OpenMP** (Shared Memory Parallelism).
 
-## 💻 Technologies utilisées
+##  Technologies utilisées
 
 * **Langage :** C/C++
 * **Parallélisation :** OpenMP
 * **Analyse :** Python (Matplotlib)
 * **Environnement :** Linux/Ubuntu
 
-## 🛠️ Compilation et Exécution
+##  Compilation et Exécution
 
 L'application a été compilée avec le drapeau `-fopenmp` et exécutée pour différentes valeurs de threads ($P$). Les tests ont été réalisés sur des matrices de taille $N=512$.
 
@@ -20,7 +20,7 @@ gcc -o matrix_mult matrix_mult.c -fopenmp -Wall
 # Exécution pour P=4 threads
 export OMP_NUM_THREADS=4
 ./matrix_mult 4
-📈 Résultats et Analyse de Performance
+ Résultats et Analyse de Performance :
 
 Les temps d'exécution suivants ont été mesurés sur une machine multi-cœurs. Pour garantir une analyse cohérente, le meilleur temps séquentiel mesuré (T1,ref​=1.793901 s) a été utilisé comme référence pour le calcul du Speedup.
 Threads (P)	Temps d'Exécution TP​ (s)	Speedup SP​=T1,ref​/TP​	Efficacité EP​=SP​/P
@@ -38,5 +38,4 @@ Interprétation
 
 Conclusion : Ce projet démontre la maîtrise de l'optimisation OpenMP et la capacité à réaliser une analyse de performance critique des résultats réels.
 
-Visualisation du Speedup :
 
