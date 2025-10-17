@@ -4,8 +4,7 @@
 #include <omp.h> // Bibliothèque OpenMP
 
 // Taille des matrices N x N
-// CONSEIL : Commencez par N=1024 ou N=2048 si votre machine le permet, 
-// sinon utilisez N=512 pour un test rapide.
+
 #define N 512 
 
 // Définition des matrices globales
